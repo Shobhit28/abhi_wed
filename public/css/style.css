@@ -41,8 +41,9 @@ nav a:focus {
 	outline: none;
 }
 .header {
-    background: #6D041E;
+    background: #42c5f4;;
     padding: 1em 0;
+    background-color: #42c5f4;
 }
 .navbar-default {
     background: none;
@@ -216,7 +217,8 @@ h3.tittle1 {
 }
 .couple-top {
     padding: 4em;
-    background: #FBF2F4;
+    background: #ccf4ff;
+    /*background: #42c5f4;*/
 }
 .couple-text {
     margin-top: 2em;
@@ -375,7 +377,7 @@ h3.tittle1 {
     color: #777;
 }
 .lovers {
-    background:#FBF2F4;
+    background:#ccf4ff;
 	padding:5em 0;
 }
 .until-text h5 {
@@ -400,7 +402,7 @@ h3.tittle1 {
 }
 .couples {
     padding: 5em 0;
-	background: #FBF2F4;
+	background: #42b0f4;
 }
 h3.tittle {
     font-size: 3.5em;
