@@ -9,7 +9,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html>
 <head>
 	<title>Jushrita &#9829; Abhishek</title>
-	<link rel="stylesheet" href="blueimp/css/blueimp-gallery.min.css">
+
 	<!--css-->
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -19,37 +19,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 	<!--timer-->
-	<link rel="stylesheet" href="css/jquery.countdown.css" />
+
 	<!--timer-->
 	<!--js-->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/numscroller-1.0.js"></script>
-
-	<script src="js/responsiveslides.min.js"></script>
-	<script>
-		$(function () {
-			$("#slider").responsiveSlides({
-				auto: true,
-				nav: true,
-				speed: 500,
-				namespace: "callbacks",
-				pager: true,
-			});
-		});
-	</script>
-	<!--startsmothscrolling-->
-	<script type="text/javascript" src="js/move-top.js"></script>
-	<script type="text/javascript" src="js/easing.js"></script>
-	<script type="text/javascript">
-		jQuery(document).ready(function($) {
-			$(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
-			});
-		});
-	</script>
-	<!--endsmothscrolling-->
 
 
 
@@ -104,7 +78,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
-
+<!-- 
 	<div class="item active">
         <img src="pics/21s.jpg" alt="Flower">
       </div>
@@ -125,8 +99,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
       </div>
 
       <div class="item">
-        <img src="pics/44s.jpg" alt="Flower">
-      </div>
+        <img src="pics/44s.JPG" alt="Flower">
+      </div> -->
 
 <!-- 	  <div class="item">
 
@@ -209,8 +183,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="couple-grids">
 					<div class="col-sm-6 couple-grid">
 						
-							<div>
-								<img src="pics/40s.JPG" class="img-rounded" alt="" width="400" height="500">
+							<div id="groomPic">
+								<!-- <img src="pics/40s.JPG" class="img-rounded" alt="" width="400" height="500"> -->
 							</div>
 							<div class="couple-text hvr-wobble-bottom">
 								<h6>GROOM</h6>
@@ -221,8 +195,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 					<div class="col-sm-6 couple-grid">
 						
-							<div>
-								<img src="pics/41s.jpg" class="img-rounded" alt="" width="400" height="500">
+							<div id="bridePic">
+								<!-- <img src="pics/41s.jpg" class="img-rounded" alt="" width="400" height="500"> -->
 							</div>
 							<div class="couple-text hvr-wobble-bottom">
 								<h6>BRIDE</h6>
@@ -345,15 +319,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</p>
 <br>
 <br>	
-	<h2>Haldi & Mehandi</h2>
-						<br/>
-
-						<p style="color: #258BA0;">
-							<span class="glyphicon glyphicon-time"></span> on Monday, 20 Feb 2017 From 4:00PM
-							<span class= "glyphicon glyphicon-map-marker"></span> At Bhaskar Sabhagruh, Nagpur
-						</p>
-<br>
-<br>	
 						<h2>Lagan</h2>
 						<br/>
 
@@ -426,7 +391,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
     
-      <div class="item active">
+      <!-- <div class="item active">
         <img src="pics/new2.jpg" alt="Flower" style="width: 100%">
       </div>
 
@@ -472,7 +437,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
       <div class="item">
         <img src="pics/30s.jpg" alt="Flower" style="width: 100%">
-      </div>
+      </div> -->
     </div>
 
     <!-- Left and right controls -->
@@ -518,8 +483,40 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         }
     };
 	var isMobileDevice = isMobile.any();
-	if(!isMobileDevice) {
-		//$('#myCarousel').find('.carousel-inner').css('height', '800px');
+	try {
+
+	} catch(e){console.log(e);}
+	if(isMobileDevice) {
+
+		var mobilePicsFirstSet = '<div class="item active"><img src="pics/mobile/21s.jpg" alt="Flower"></div><div class="item"><img src="pics/mobile/28s.jpg" alt="Chania"></div><div class="item"><img src="pics/mobile/08s.jpg" alt="Flower"></div><div class="item"><img src="pics/mobile/25s.jpg" alt="Flower"></div><div class="item"><img src="pics/mobile/44s.jpg" alt="Flower"></div>';
+
+		$('#myCarousel').find('.carousel-inner').append(mobilePicsFirstSet);
+
+		var mobilePicsSecondSet = '<div class="item active"><img src="pics/mobile/new2.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/new3.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/new5.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/new6.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/new7.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/new8.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/new9.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/new10.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/new11.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/03s.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/06s.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/30s.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/mobile/07s.jpg" alt="Flower" style="width: 100%"></div>';
+
+		$('#anotherCarousel').find('.carousel-inner').append(mobilePicsSecondSet);
+		var groomPic = '<img src="pics/mobile/40s.jpg" class="img-rounded" alt="" width="400" height="500">';
+		$('#groomPic').append(groomPic);
+
+		var bridePic = '<img src="pics/mobile/41s.jpg" class="img-rounded" alt="" width="400" height="500">';
+		$('#bridePic').append(bridePic);
+	} else {
+
+		var systemPicsFirstSet = '<div class="item active"><img src="pics/21s.jpg" alt="Flower"></div><div class="item"><img src="pics/28s.jpg" alt="Chania"></div><div class="item"><img src="pics/08s.jpg" alt="Flower"></div><div class="item"><img src="pics/25s.jpg" alt="Flower"></div><div class="item"><img src="pics/44s.jpg" alt="Flower"></div>';
+
+		$('#myCarousel').find('.carousel-inner').append(systemPicsFirstSet);
+
+
+		var systemPicsSecondSet = '<div class="item active"><img src="pics/new2.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/new3.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/new5.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/new6.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/new7.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/new8.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/new9.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/new10.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/new11.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/03s.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/06s.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/30s.jpg" alt="Flower" style="width: 100%"></div><div class="item"><img src="pics/07s.jpg" alt="Flower" style="width: 100%"></div>';
+
+		$('#anotherCarousel').find('.carousel-inner').append(systemPicsSecondSet);
+
+		var groomPic = '<img src="pics/mobile/40s.jpg" class="img-rounded" alt="" width="400" height="500">';
+		$('#groomPic').append(groomPic);
+
+		var bridePic = '<img src="pics/mobile/41s.jpg" class="img-rounded" alt="" width="400" height="500">';
+		$('#bridePic').append(bridePic);
+
 	}
 	</script>
 </body>
